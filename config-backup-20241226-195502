@@ -30,6 +30,9 @@ source = ~/.config/hypr/includes.conf
 # All the settings below are up to you. We don't touch them in the shell config utility.
 #
 
+# Some default env vars.t
+env = XCURSOR_SIZE,24
+
 decoration {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
     rounding = 5
@@ -167,26 +170,6 @@ bind = $mainMod SHIFT, down, movewindow, d
 # MOVE/RESIZE WINDOWS with mainMod + LMB/RMB and dragging
 bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
-
-# KEY BINDINGS SUBMAP TO RESIZE WINDOWS WITH ARROW KEYS
-# switch to a submap called resize
-bind = $mainMod, R, submap, resize
-
-# start a submap called "resize"
-submap = resize
-
-# set repeatable binds for resizing the active window
-binde = , right, resizeactive, 10 0
-binde = , left, resizeactive, -10 0
-binde = , up, resizeactive, 0 -10
-binde = , down, resizeactive, 0 10
-
-# use reset to go back to the global submap
-bind = , escape, submap, reset
-
-# will reset the submap, which will return to the global submap
-submap = reset
-# keybinds further down will be global again...
 
 #
 # HUD MESSAGES (must be defined after primary bindings).
